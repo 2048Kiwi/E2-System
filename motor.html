@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>E2 System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="/webiopi.js"></script>
+<script type="text/javascript" src="motor.js"></script>
+</head>　　　　　　　　　　
+	<body>
+	<header>
+		<img src="http://192.168.37.68:8080/?action=stream" style="transform:scale(-1,-1);"/>
+		<!--localIP 
+				家	：192.168.3.17 
+				ラボ	：192.168.37.68
+				携帯	：192.168.43.38-->
+	</header>
+ <main>
+	<div class="y1">
+		<div class="stateBox">
+			<div class="stateLabel evaText"><p>走行状態</p></div>
+			<div class="stateRight evaText"><p>右</p></div>
+			<div class="stateLeft evaText"><p>左</p></div>
+			<div id = "st" class="stateText evaText"><p>停止</p></div>
+			<div class="stateTextBar"></div>
+			<div class="stateSprite"></div>
+		</div>
+		<div class="timerBox">
+			<div class="stateLabel evaText"><p>活動限界</p></div>
+			<div class="stateSprite"></div>
+			<div id="big" class="time minsec"><p>0:00</p></div>
+			<div id="small" class="time milisec"><p>:00</p></div>
+			<div class="mainPower evaText"><p>主電源供給システム</p></div>
+			<div id="powFrom" class="powerFrom evaText"><p>外部</p></div>
+		</div>
+	</div>
+	<div class="y2">
+		<div class="directionBox">
+			<div id="forward" class="triangle up"></div>
+			<div id="backward" class="triangle down"></div>
+			<div id="left" class="triangle left"></div>
+			<div id="right" class="triangle right"></div>
+			<div class="label evaText"><p>移動</p></div>
+		</div>
+		<div class="speedBox">
+			<div id="spUp" class="triangle up"></div>
+			<div id="spDown" class="triangle down"></div>
+			<div id="spText" class="speedText">40%</div>
+			<div class="label evaText"><p>速度</p></div>
+		</div>
+		<div class="cameraBox">
+			<div id="camUp" class="triangle up"></div>
+			<div id="camDown" class="triangle down"></div>
+			<div class="label evaText"><p>視野</p></div>
+		</div>
+	</div>
+	<div id="pow" class="powerBox y3">
+		<div id="powText" class="onoffText evaText">出撃</div>
+		<div class="onoffSplite"></div>
+	</div>
+
+	 
+</main>
+</body>
+</html>

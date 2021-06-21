@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap&subset=japanese');
+
+* { 
+    margin: 0px; 
+    padding: 0px; 
+}
+html {
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+body {
+    width: 360px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+img {
+    width: 100%;
+}
+header {
+    position: absolute;
+    top: 0;
+    width: 360px;
+    height: 240px;
+}
+main {
+    position: absolute;
+    top: 240px;
+    width: 100%;
+    height: 560px;
+    background: rgb(0, 0, 0);
+}
+.y1{
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+.y2{
+    position: absolute;
+    top: 140px;
+    left: 50%;
+}
+.y3{
+    position: absolute;
+    top: 375px;
+    left: 50%;
+}
+.stateBox{
+    position: absolute;
+    left: 28px;
+    width: 140px;
+    height: 100px;
+    border: solid 2px rgb(50, 50, 50);
+}
+.stateLabel{
+    z-index: 1;
+    position: absolute; 
+    left: 0pt;
+    top: 0pt;
+    color: rgb(0, 0, 0);
+    background-color: rgb(50, 50, 50);
+    padding: 0px 5px 2px 5px;
+    font-size: 10pt;
+}
+.stateText{
+    position: absolute; 
+    right: 0pt;
+    bottom: 0pt;
+    color: rgb(50, 50, 50);
+    padding: 2px 2px 2px 2px;
+    font-size: 38pt;
+}
+.stateTextBar{
+    position: absolute;
+    right: 2px;
+    bottom: 5px;
+    width: 100px;
+    height: 7px;
+    background:rgb(50, 50, 50);
+}
+.stateRight{
+    position: absolute; 
+    left: 0pt;
+    bottom: 25pt;
+    color: rgb(50, 50, 50);
+    padding: 2px 2px 2px 4px;
+    font-size: 20pt;
+}
+.stateLeft{
+    position: absolute; 
+    left: 0pt;
+    bottom: 0pt;
+    color: rgb(50, 50, 50);
+    padding: 2px 2px 2px 4px;
+    font-size: 20pt;
+}
+.stateSprite{
+    position: absolute;
+    right: 0px;
+    width: 80px;
+    height: 23px;
+    background: repeating-linear-gradient(
+        45deg,     /* 角度の指定 */
+        rgb(50, 50, 50),      /* 色A ... 開始 */
+        rgb(50, 50, 50) 5px,  /* 色A ... 終了 */
+        #000 5px,      /* 色B ... 開始 */
+        #000 10px   /* 色B ... 終了 */
+    );
+}
+.timerBox{
+    position: absolute;
+    right: 28px;
+    width: 140px;
+    height: 100px;
+    border: solid 2px rgb(50, 50, 50);
+}
+.time{
+    position: absolute;
+    bottom: -10px;
+    font-family: YuMincho, 'Yu Mincho', 'Noto Serif JP', serif;
+    font-weight: bold;
+    color:rgb(50, 50, 50);
+}
+.minsec{
+    position: absolute;
+    left: 5px;
+    font-size: 35pt;
+}
+.milisec{
+    position: absolute;
+    left: 100px;
+    bottom: 0px;
+    font-size: 15pt;
+}
+.mainPower{
+    position: absolute;
+    left: 2px;
+    top: 30px;
+    font-size: 8pt;
+    color:rgb(255, 0, 0);
+    border: solid 1px rgb(255, 0, 0);
+}
+.powerFrom{
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: 2px;
+    top: 30px;
+    font-size: 16pt;
+    color:rgb(255, 0, 0);
+    border: solid 1px rgb(255, 0, 0);
+}
+.directionBox{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    border: solid 2px rgb(50, 50, 50);
+}
+.speedBox{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateX(120px);
+    width: 60px;
+    height: 120px;
+    border: solid 2px rgb(50, 50, 50);
+}
+.speedText{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: rgb(50, 50, 50);
+    font-family: YuMincho, 'Yu Mincho', 'Noto Serif JP', serif;
+    font-weight: bold;
+    font-size: 18pt;
+}
+.cameraBox{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateX(-120px);
+    width: 60px;
+    height: 120px;
+    border: solid 2px rgb(50, 50, 50);
+}
+.cameraTriangle{
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(50, 50, 50);
+    transform: translateY(-50%) translateX(-50%) rotate(10deg);
+}
+.cameraTriangle::after{
+    content: "";
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    border-bottom: 20px solid rgb(250, 50, 50);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+.evaText{
+    font-family: YuMincho, 'Yu Mincho', 'Noto Serif JP', serif;
+    font-weight: bold;
+}
+.label{
+    position: absolute; 
+    right: -1.5px;
+    bottom: 0px;
+    transform: translateY(100%);
+    color: rgb(0, 0, 0);
+    background-color: rgb(50, 50, 50);
+    padding: 0px 5px 2px 5px;
+    font-size: 10pt;
+}
+.triangle{
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    border-bottom: 20px solid rgb(50, 50, 50);
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+.uiEnable{
+    color: rgb(255, 0, 0);
+}
+.trEnable{
+    border-bottom: 20px solid rgb(255, 0, 0);
+}
+
+.trOn{
+    border-bottom: 20px solid rgb(255, 128, 0);
+}
+.up{
+    position: absolute; 
+    left: 50%;
+    top: 10px; 
+    transform: translateX(-50%)
+ }
+ .down{
+    position: absolute; 
+    left: 50%;
+    bottom: 10px; 
+    transform: translateX(-50%) rotate(180deg);
+ }
+ .left{
+    position: absolute; 
+    top: 50%; 
+    left: 10px;
+    transform: translateY(-50%) translateX(-50%) rotate(270deg) translateY(50%);
+ }
+ .right{
+    position: absolute; 
+    top: 50%; 
+    right: 10px;
+    transform: translateY(-50%) translateX(50%) rotate(90deg) translateY(50%);
+ }
+ .powerBox{
+    position: absolute;
+    left: 50%;
+    top:300px;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 60px;
+    border: solid 2px rgb(255, 0, 0); 
+}
+.onoffText{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 0px 5px 0px 2px; 
+    font-size: 28pt;
+    color:red;
+    background-color: rgb(0, 0, 0);
+    transform: translateY(-50%) translateX(-50%);
+    white-space: nowrap;
+}
+.onoffSplite{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 50px;
+    width: 290px;
+    background: repeating-linear-gradient(
+        45deg,     /* 角度の指定 */
+        rgb(255, 0, 0),      /* 色A ... 開始 */
+        rgb(255, 0, 0) 8px,  /* 色A ... 終了 */
+        #000 8px,      /* 色B ... 開始 */
+        #000 16px   /* 色B ... 終了 */
+    );
+    z-index: -1;
+}
